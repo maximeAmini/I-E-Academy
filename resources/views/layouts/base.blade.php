@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>@isset($titre) {{$titre.' | '}} @endisset LaraCarte</title>
+    <title>@isset($titre) {{$titre.' | '}} @endisset {{env('APP_NAME')}}</title>
     <meta name="viewport" content="width=device-width" />
 
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">

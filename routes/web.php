@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'pages.welcome')->name('home');
+
+Route::resource('news', 'NewsController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

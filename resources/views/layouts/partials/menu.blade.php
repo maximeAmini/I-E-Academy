@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark col-lg-2 col-sm-3 fixed-top" id="menu">
     <div class="flex-column">
-        <a class="navbar-brand" href="#" style="font-weight:bold; font-family: cursive;" id="titre">
+        <a class="navbar-brand" href="{{route('home')}}" style="font-weight:bold; font-family: cursive;" id="titre">
             <i class="fas fa-book"></i> <span style="color:blue;">I</span>-<span style="color:red;">E</span>-Academy
         </a>
 
@@ -10,20 +10,16 @@
             <ul class="navbar-nav mt-2 mt-lg-0 flex-column">
 
                 <li class="nav-item active pb-3" style="border-bottom: 1px solid rgba(255,255,255,.15); margin-right:-18%;" >
-                    <a class="nav-link" href="tabBord.php"> <i class="fas fa-fw fa-tachometer-alt"></i> Tableau de
-                        bord</a>
+                    <a class="nav-link" href="{{route('home')}}">
+                        <i class="fas fa-fw fa-tachometer-alt"></i> Tableau de bord
+                    </a>
                 </li>
 
                 <!-- gestion des news -->
                 <li class="nav-item dropdown mt-3" style="margin-right:-18%;">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a class="nav-link" href="{{route('news.index')}}">
                         <i class="fas fa-newspaper"></i> Gerer les news <i class="fas fa-angle-double-right float-right mt-1"></i>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="cours.php"> Liste des cours</a>
-                        <a class="dropdown-item" href="addCours.php"> Ajouter un cours</a>
-                    </div>
                 </li>
 
                 <!-- gestion des Textes -->
