@@ -61,9 +61,7 @@
 
     <ul class="navbar-nav ml-auto mr-4" id="rechLogo">
         <li class="nav-item ">
-            <a class="navbar-toggler float-right" type="button" data-toggle="collapse"
-                data-target="#menuRech" aria-controls="menuRech" aria-expanded="true"
-                aria-label="Toggle navigation">
+            <a class="navbar-toggler float-right" data-toggle="collapse" data-target="#menuRech" aria-controls="menuRech" aria-expanded="false" aria-label="Toggle navigation" style="border:none;">
                 <i class="fas fa-search"></i>
             </a>
         </li>

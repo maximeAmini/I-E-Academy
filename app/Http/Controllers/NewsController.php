@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\NewsRequest;
 use App\News;
 
 class NewsController extends Controller
@@ -25,7 +25,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('News.create');
     }
 
     /**
@@ -34,9 +34,12 @@ class NewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NewsRequest $request)
     {
-        //
+        News::create(['contenu'=>$request['contenu'],'statut'=>$request['statut']]);
+
+        $news= News::all();
+        return redirect(route("news.index", ['news'=>$news]));
     }
 
     /**
@@ -47,7 +50,8 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $new = News::findOrFail($id);
+        return view('news.show', compact('new'));
     }
 
     /**
@@ -58,7 +62,8 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $new = News::findOrFail($id);
+        return view('News.update', compact('new'));
     }
 
     /**
@@ -68,9 +73,12 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(NewsRequest $request, $id)
     {
-        //
+        $new = News::findOrFail($id);
+        $new->update(['contenu'=>$request['contenu'],'statut'=>$request['statut']]);
+
+        return redirect(route('news.show', $new));
     }
 
     /**
@@ -81,6 +89,9 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        News::destroy($id);
+
+        $news= News::all();
+        return redirect(route("news.index", ['news'=>$news]));
     }
 }
