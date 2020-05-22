@@ -33,6 +33,17 @@
     font-size: 10px;
 }
 
+.SuppForm{
+    color:#dc3545;
+    border:none;
+    background:none;
+    padding:0%;
+}
+
+.SuppForm:active{
+    border:none;
+}
+
 @media screen and (max-width: 569px) {
     .princi {
         margin-left: 10px;

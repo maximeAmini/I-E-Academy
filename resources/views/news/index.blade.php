@@ -20,10 +20,10 @@
             <div style="font-size:13px; ">
                 <a href="{{route('news.edit', $new ) }}" title="Modifier"><i
                         class="fas fa-edit mr-2"> </i></a>
-                <form action="{{route('news.destroy', $new)}}" method="post" style="display: inline">
+                <form action="{{route('news.destroy', $new)}}" method="post" style="display: inline;" >
                     @csrf
                     @method('delete')
-                    <button type="submit" style="color:#dc3545; border:none; background:none;" title="Supprimer"><i class="fas fa-trash mr-2"></i></button>
+                    <button type="submit" class="SuppForm" title="Supprimer"><i class="fas fa-trash mr-2"></i></button>
                 </form>
                 <a href="{{route('news.show', $new ) }}" title="Voir"><i class="fas fa-eye"></i></a>
             </div>

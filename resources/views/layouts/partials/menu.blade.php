@@ -23,15 +23,10 @@
                 </li>
 
                 <!-- gestion des Textes -->
-                <li class="nav-item dropdown mt-1" style="margin-right:-18%;">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <i class="fas fa-paragraph"></i> Gerer les textes <i class="fas fa-angle-double-right float-right mt-1"></i>
+                <li class="nav-item dropdown " style="margin-right:-18%;">
+                    <a class="nav-link" href="{{route('textes.index')}}">
+                        <i class="fas fa-paragraph"></i> Gerer les Textes <i class="fas fa-angle-double-right float-right mt-1"></i>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="cours.php"> Liste des cours</a>
-                        <a class="dropdown-item" href="addCours.php"> Ajouter un cours</a>
-                    </div>
                 </li>
 
                 <!-- gestion des Textes -->

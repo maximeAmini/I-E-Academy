@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/icone/css/all.css">
     <script src="../../css/bootstrap/js/jquery.js"></script>
-    <script src="../../css/bootstrap/js/bootstrap.min.js"></script>
+
+    @if ( isset($titre) && ( $titre=="Créer un texte" || $titre =='modifer un texte'))
+    <link href="../../css/summer/summernote-bs4.css" rel="stylesheet">
+    <script src="../../css/summer/popper.min.js" ></script>
+    @endif
+
+    <script src="../../css/bootstrap/js/bootstrap.js" ></script>
+    <script src="../../css/summer/summernote-bs4.js"></script>
+    <script src="../../css/summer/lang/summernote-fr-FR.min.js"></script>
+
 
     <link rel="stylesheet" href="../../css/style.css">
 

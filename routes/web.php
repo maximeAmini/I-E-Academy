@@ -17,5 +17,7 @@ Route::view('/', 'pages.welcome')->name('home');
 
 Route::resource('news', 'NewsController');
 
+Route::resource('textes', 'TextesController');
+
 Auth::routes();
 
