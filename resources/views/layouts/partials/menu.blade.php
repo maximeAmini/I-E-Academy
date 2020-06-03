@@ -81,7 +81,7 @@
         <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
-                <i class="fas fa-user"></i> Maxime
+                <i class="fas fa-user"></i> {{Auth::user()['name']}}
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="position:absolute">

@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'pages.welcome')->name('home');
+Route::view('/', 'pages.welcome')->name('home')->middleware('auth');;
 
-Route::resource('news', 'NewsController');
+Route::resource('news', 'NewsController')->middleware('auth');;
 
-Route::resource('textes', 'TextesController');
+Route::resource('textes', 'TextesController')->middleware('auth');;
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
